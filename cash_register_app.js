@@ -20,10 +20,12 @@ checkButton.addEventListener("click",function validateBillANdCashAmount(){
             const amountToBeReturned = cashGiven.value - billAmount.value;
             setVisibility('hide2','block');
             calculateChange(amountToBeReturned);
+        }else if(Number(cashGiven.value) === Number(billAmount.value)){
+            setVisibility('hide2','block');
+            showMessageCash("Bill has been paid");
         }else{
             setVisibility('hide2','block');
             showMessageCash("Do you want to  wash plates please?");
-
         }
     }else{
         setVisibility('hide2','block');
